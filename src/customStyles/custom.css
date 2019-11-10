@@ -1,0 +1,28 @@
+@media screen and (min-width: 600px) {
+    .title {
+      font-size: 80px;
+      color: black;
+    }
+    
+
+  }
+  
+  /* for mobiles */
+  @media screen and (max-width: 600px) {
+    .title {
+      display: none;
+    }
+  }
+
+.generalMargin{
+  margin: 10px 10px 10px 10px;
+}
+
+.generalPadding{
+  padding: 10px 20px 10px 20px;
+}
+
+.field{
+  width: 300;
+  /* max-width: 300; */
+}
