@@ -28,12 +28,12 @@ export default class CreateEvent extends Component {
 
     onSubmit(e) {
         e.preventDefault();
-        const event = {
-            title: this.state.title,
-            date: this.state.date,
-            venue: this.state.venue,
-            description: this.state.description
-        }
+        // const event = {
+        //     title: this.state.title,
+        //     date: this.state.date,
+        //     venue: this.state.venue,
+        //     description: this.state.description
+        // }
     }
 
     render() {
