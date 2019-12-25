@@ -8,6 +8,10 @@ const initState = {
 }
 
 const eventReducer = (state = initState, action) => {
+    switch (action.type){
+        case 'CREATE_EVENT':
+            console.log('event created', action.event)
+    }
     return state
 }
 

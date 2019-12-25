@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { createEvent } from '../../store/actions/eventActions'
+import { connect } from 'react-redux'
 // import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Form, Button } from 'react-bootstrap';
@@ -8,7 +10,7 @@ import Notification from '../notifications/Notifications'
 
 AOS.init({ delay: 800 });
 
-export default class CreateEvent extends Component {
+class CreateEvent extends Component {
     constructor() {
         super()
         this.state = {
@@ -18,6 +20,7 @@ export default class CreateEvent extends Component {
             description: ''
         }
         this.onChange = this.onChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
     }
 
     onChange(e) {
@@ -34,6 +37,7 @@ export default class CreateEvent extends Component {
         //     venue: this.state.venue,
         //     description: this.state.description
         // }
+        this.props.createEvent(this.state);
     }
 
     render() {
@@ -43,7 +47,7 @@ export default class CreateEvent extends Component {
                     <div class="col col-lg-8 col-12">
                         <div data-aos={"fade-right"} className="container">
                             <h2 className="generalMargin">Create an Event</h2><hr />
-                            <Form>
+                            <Form onSubmit={this.onSubmit}>
                                 <Form.Group controlId="formBasicName">
                                     <Form.Label>Event Title</Form.Label>
                                     <Form.Control isValid={false} type="text" name="title" placeholder="Software Freedom Day" onChange={this.onChange} />
@@ -79,3 +83,11 @@ export default class CreateEvent extends Component {
         );
     }
 }
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        createEvent : (event) => dispatch(createEvent(event))
+    }
+}
+
+export default connect(null,mapDispatchToProps)(CreateEvent)
