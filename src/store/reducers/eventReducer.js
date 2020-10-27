@@ -11,8 +11,13 @@ const eventReducer = (state = initState, action) => {
     switch (action.type){
         case 'CREATE_EVENT':
             console.log('event created', action.event)
+            return state;
+        case 'CREATE_ERROR':
+            console.log('Something went wrong', action.err);
+            return state;
+        default:
+            return state;
     }
-    return state
 }
 
 export default eventReducer;
