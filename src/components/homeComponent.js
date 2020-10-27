@@ -11,7 +11,7 @@ AOS.init({delay:800});
 export default class HomePage extends Component {
     render() {
         return (
-            <Container>
+            <Container className="pt-5">
                 <Jumbotron data-aos={"fade-right"}>
                     <h3>Welcome to Event Manager 1.0</h3>
                     <p>

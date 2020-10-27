@@ -17,7 +17,7 @@ export default class EventDetails extends Component {
     }
     render() {
         return (
-            <div className="container">
+            <div className="container pt-5">
                 <div class="card border-light mb-3" style={{ maxWidth: "80rem" }}>
                     <div class="card-header">Event Name ___ {this.state.id}</div>
                     <div class="card-body">

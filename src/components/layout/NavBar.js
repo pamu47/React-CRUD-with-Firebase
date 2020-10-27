@@ -1,12 +1,12 @@
 import React from 'react';
-import { Carousel, Navbar, Nav } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 
 const NavBar = () => {
     return (
         <div>
-            <Carousel>
+            {/* <Carousel>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
@@ -17,7 +17,7 @@ const NavBar = () => {
                         <h5 className="title">_ Redux + React + Firestore _</h5>
                     </Carousel.Caption>
                 </Carousel.Item>
-            </Carousel>
+            </Carousel> */}
             <Navbar bg="dark" variant="dark">
                 <Navbar.Brand href="#home">
                     <img
