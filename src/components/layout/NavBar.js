@@ -1,23 +1,12 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 
 const NavBar = () => {
     return (
         <div>
-            {/* <Carousel>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={require('../../images/first.png')}
-                        alt="First slide"
-                    />
-                    <Carousel.Caption>
-                        <h5 className="title">_ Redux + React + Firestore _</h5>
-                    </Carousel.Caption>
-                </Carousel.Item>
-            </Carousel> */}
             <Navbar bg="dark" variant="dark">
                 <Navbar.Brand href="#home">
                     <img
@@ -39,4 +28,11 @@ const NavBar = () => {
     );
 }
 
-export default NavBar
+const mapStateToProps = (state) => {
+    console.log(state)
+    return {
+
+    }
+}
+
+export default connect(mapStateToProps)(NavBar)
