@@ -24,7 +24,7 @@ class ViewEvents extends Component {
                 return (
                   <div key={event.id}>
                     <Link
-                      to="/event/1"
+                      to={'/event/'+event.id}
                       className={
                         "list-group-item list-group-item-action flex-column align-items-start due"
                       }
