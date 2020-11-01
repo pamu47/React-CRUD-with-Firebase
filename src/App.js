@@ -10,6 +10,7 @@ import SignUp from './components/authentication/SignUp';
 import CreateEvent from './components/crud/CreateEvent';
 import ViewEvents from './components/crud/ViewEvents'
 import EventDetails from './components/crud/EventDetails';
+import ParentComponent from './components/test/component1';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Route path='/create' component={CreateEvent} />
       <Route path='/event/:id' component={EventDetails} />
       <Route path='/eventlist' component={ViewEvents}/>
+      <Route path='/parent' component={ParentComponent}/>
     </BrowserRouter>
   );
 }
