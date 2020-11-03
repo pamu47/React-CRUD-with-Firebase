@@ -5,7 +5,6 @@ class ChildComponent extends Component {
     super(props);
 
     this.sendData = this.sendData.bind(this);
-    console.log(props);
   }
 
   sendData(data) {
@@ -13,6 +12,7 @@ class ChildComponent extends Component {
   }
 
   render() {
+    console.log(this.props);
     return (
       <div>
         <button onClick={this.sendData}>Send Data</button>
