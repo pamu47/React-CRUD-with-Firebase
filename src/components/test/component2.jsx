@@ -1,26 +1,24 @@
-import React, {Component} from 'react'
+import React, { Component } from "react";
 
-class ChildComponent extends Component{
-    constructor(props){
-        super(props)
+class ChildComponent extends Component {
+  constructor(props) {
+    super(props);
 
-        this.sendData = this.sendData.bind(this)
-    }
+    this.sendData = this.sendData.bind(this);
+    console.log(props);
+  }
 
+  sendData(data) {
+    this.props.parentCallback("Data from child");
+  }
 
-    sendData(data){
-        this.props.parentCallback("Data from child")
-    }
-
-    render(){
-        return(
-            <div>
-                <button onClick={this.sendData}>
-                    Send Data
-                </button>
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div>
+        <button onClick={this.sendData}>Send Data</button>
+      </div>
+    );
+  }
 }
 
-export default ChildComponent
+export default ChildComponent;
