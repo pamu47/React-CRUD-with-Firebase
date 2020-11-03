@@ -12,7 +12,6 @@ class ChildComponent extends Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <div>
         <button onClick={this.sendData}>Send Data</button>
